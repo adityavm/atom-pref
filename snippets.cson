@@ -1,0 +1,92 @@
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+
+#
+# javascript
+#
+".source.js":
+  "describe test":
+    "prefix": "describetest"
+    "body": """
+    describe("$1", () => {
+
+      // init globals
+      let
+        $root,
+        $scope,
+        $q,
+        $compile,
+        $controller,
+        $2;
+
+
+    });
+    """
+
+  "before each":
+    "prefix": "beforetest"
+    "body": """
+    beforeEach(() => {
+      // initialize dependecy modules
+      $1
+
+      // initialize module to test
+      module("$2", ["$provide", $provide => {
+
+      }]);
+
+      // inject required dependencies
+      inject(($3) => {
+        $3
+      });
+    });
+    """
+
+  "it should":
+    "prefix": "ittest"
+    "body": """
+    it("$1", () => {
+      // arrange / set up responses
+      spyOn(service, "function").and.returnValue("");
+
+      // act
+      $scope.$digest();
+
+      // assert
+      expect();
+    });
+    """
+
+  "eslint disable":
+    "prefix": "eld"
+    "body": "/* eslint-disable */"
+
+  "eslint enable":
+    "prefix": "ele"
+    "body": "/* eslint-enable */"
+
+  "debugger":
+    "prefix": "debug"
+    "body": "debugger; // eslint-disable-line"
+
+  "consolelog":
+    "prefix": "log"
+    "body": "console.log($1)"
+
+#
+# markdown
+#
+".source.gfm":
+  "mit license":
+    "prefix": "mit"
+    "body": """
+    The MIT License
+
+    Copyright (c) $1 $2
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    """

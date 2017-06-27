@@ -1,0 +1,81 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+
+// style the background color of the tree view
+.tree-view {
+  // background-color: whitesmoke;
+}
+
+@seti-bg: #15191b;
+@seti-red: #f92672;
+@seti-blue: #66d9ef;
+
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+  // color: white;
+  background-color: @seti-bg;
+
+  // To style other content in the text editor's shadow DOM, use the ::shadow expression
+  .cursor {
+    border-color: @seti-red;
+    border-width: 2px;
+  }
+
+  .gutter[gutter-name="line-number"] {
+    background-color: darken(@seti-bg, 1%) !important;
+    color: fadeout(#fff, 80%);
+  }
+
+  .scroll-view {
+    padding-left: 5px;
+  }
+
+  .indent-guide {
+    color: fadeout(#fff, 98%) !important;
+  }
+
+  .line-number {
+    &.cursor-line {
+      background-color: fadeout(#fff, 98%);
+      color: fadeout(#fff, 50%);
+    }
+
+    &.bookmarked {
+      background-color: #66d9ef !important;
+      color: #111;
+
+      .icon-right::before {
+        color: transparent !important;
+      }
+    }
+  }
+
+  .cursor-line {
+    background-color: fadeout(#fff, 98%);
+  }
+}
+
+.indent-guide-improved {
+  background-color: fadeout(#fff, 98%);
+
+  &.indent-guide-stack {
+    background-color: fadeout(#fff, 98%);
+
+    &.indent-guide-active {
+      background-color: fadeout(#fff, 90%);
+    }
+  }
+}

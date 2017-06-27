@@ -1,0 +1,132 @@
+"*":
+  Hydrogen:
+    kernelspec: "{\"kernelspecs\":{\"javascript\":{\"resource_dir\":\"/Users/aditya/Library/Jupyter/kernels/javascript\",\"spec\":{\"language\":\"javascript\",\"display_name\":\"Javascript (Node.js)\",\"env\":{},\"argv\":[\"/usr/local/Cellar/node/5.9.1/bin/node\",\"/usr/local/lib/node_modules/ijavascript/lib/kernel.js\",\"{connection_file}\",\"--protocol=5.0\"]}},\"python2\":{\"resource_dir\":\"/Users/aditya/anaconda/lib/python2.7/site-packages/ipykernel/resources\",\"spec\":{\"language\":\"python\",\"display_name\":\"Python 2\",\"env\":{},\"argv\":[\"/Users/aditya/anaconda/bin/python\",\"-m\",\"ipykernel\",\"-f\",\"{connection_file}\"]}}}}"
+  "atom-beautify":
+    _analyticsUserId: "221df0f9-10b8-41d9-a3e1-0ad8bdd12898"
+  "atom-ctags":
+    GotoSymbolKey: [
+      "meta"
+    ]
+  "autoclose-html": {}
+  "autocomplete-plus":
+    autoActivationDelay: 100
+    maxVisibleSuggestions: 5
+  clock:
+    am_pm_suffix: true
+  core:
+    closeEmptyWindows: false
+    disabledPackages: [
+      "wrap-guide"
+      "vim-mode"
+      "vim-mode"
+      "vim-mode"
+      "vim-mode"
+      "symbols-view"
+      "language-babel"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "node_modules"
+      "bower_components"
+    ]
+    packagesWithKeymapsDisabled: [
+      "hyperclick"
+      "symbol-gen"
+    ]
+    projectHome: "/Users/aditya/dev"
+    telemetryConsent: "limited"
+    themes: [
+      "seti-ui"
+      "monokai-seti"
+    ]
+    titleBar: "custom"
+  docblockr: {}
+  editor:
+    fontFamily: "Hack"
+    fontSize: 11
+    invisibles:
+      space: " "
+    lineHeight: 1.8
+    preferredLineLength: 150
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+  emmet: {}
+  "exception-reporting":
+    userId: "04e1ceb0-f0f7-4cfe-cb6f-d8e0a8378d4c"
+  "file-icons":
+    coloured: false
+    onChanges: true
+  github: {}
+  "glowing-cursor":
+    cursorWidth: 2
+    glowColor: "#ff2f92"
+    innerColor: "#ff2f92"
+    transitionDuration: 400
+  "goto-definition": {}
+  "highlight-selected": {}
+  "language-babel": {}
+  linter: {}
+  "linter-stylelint":
+    disableWhenNoConfig: false
+    useStandard: true
+  "linter-ui-default":
+    panelHeight: 56
+    showTooltip: false
+  "livestyle-atom":
+    analyzer:
+      notify: false
+  minimap:
+    absoluteMode: true
+    plugins:
+      bookmarks: true
+      bookmarksDecorationsZIndex: 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+    scrollAnimation: true
+  "one-dark-ui": {}
+  pigments: {}
+  "seti-syntax":
+    themeColor: "Green"
+  "seti-ui":
+    compactView: true
+    font: "Default Atom Font"
+    hideProjectTab: true
+    hideTitleBar: true
+    themeColor: "Purple"
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
+  "status-bar": {}
+  "symbols-tree-view":
+    autoToggle: true
+  "todo-show":
+    ignoreThesePaths: [
+      "src/build"
+      "node_modules"
+      "external_libs"
+      "bower_components"
+    ]
+  "tree-view":
+    alwaysOpenExisting: true
+    focusOnReveal: false
+    hideIgnoredNames: true
+    squashDirectoryNames: true
+  "vim-mode": {}
+  "vim-mode-plus":
+    incrementalSearch: true
+    incrementalSearchVisitDirection: "relative"
+    stayOnDelete: true
+    stayOnTransformString: true
+    stayOnYank: true
+  welcome:
+    showOnStartup: false
