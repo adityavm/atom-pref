@@ -47,11 +47,11 @@
     titleBar: "custom"
   docblockr: {}
   editor:
-    fontFamily: "Hack"
+    fontFamily: "DejaVu Sans Code"
     fontSize: 11
     invisibles:
       space: " "
-    lineHeight: 1.8
+    lineHeight: 2
     preferredLineLength: 150
     softWrap: true
     softWrapAtPreferredLineLength: true
@@ -61,6 +61,11 @@
   "file-icons":
     coloured: false
     onChanges: true
+  "fold-functions":
+    autofold: true
+    debug: true
+    skipAutofoldWhenNotFirstLine: true
+    skipAutofoldWhenOnlyOneFunction: true
   github: {}
   "glowing-cursor":
     cursorWidth: 2
@@ -68,14 +73,15 @@
     innerColor: "#ff2f92"
     transitionDuration: 400
   "goto-definition": {}
+  hasklig:
+    fontWeight: "regular"
   "highlight-selected": {}
   "language-babel": {}
   linter: {}
-  "linter-stylelint":
-    disableWhenNoConfig: false
-    useStandard: true
+  "linter-stylelint": {}
   "linter-ui-default":
     panelHeight: 56
+    showPanel: true
     showTooltip: false
   "livestyle-atom":
     analyzer:
@@ -107,6 +113,13 @@
     rightEditorColor: "green"
     syncHorizontalScroll: true
   "status-bar": {}
+  sunset:
+    daytime_syntax_theme: "monokai-seti"
+    daytime_ui_theme: "seti-ui"
+    nighttime_syntax_theme: "pure-syntax"
+    nighttime_ui_theme: "seti-ui"
+    when_does_it_get_dark: 1900
+    when_does_it_get_light: 600
   "symbols-tree-view":
     autoToggle: true
   "todo-show":
@@ -119,12 +132,13 @@
   "tree-view":
     alwaysOpenExisting: true
     focusOnReveal: false
-    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
     squashDirectoryNames: true
   "vim-mode": {}
   "vim-mode-plus":
     incrementalSearch: true
     incrementalSearchVisitDirection: "relative"
+    notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
     stayOnDelete: true
     stayOnTransformString: true
     stayOnYank: true

@@ -71,7 +71,7 @@
 
   "consolelog":
     "prefix": "log"
-    "body": "console.log($1)"
+    "body": "console.log($1);"
 
 #
 # markdown
