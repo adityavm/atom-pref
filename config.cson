@@ -7,14 +7,44 @@
     GotoSymbolKey: [
       "meta"
     ]
+    autoBuildTagsWhenActive: true
+    cmdArgs: "--exclude=node_modules --exclude=dist --exclude=coverage --exclude=test.js"
+  "atom-ternjs":
+    inlineFnCompletionDocumentation: true
+    useSnippets: true
   "autoclose-html": {}
+  "autocomplete-modules":
+    webpack: true
   "autocomplete-plus":
     autoActivationDelay: 100
     maxVisibleSuggestions: 5
+  "bracket-matcher":
+    autocompleteCharacters: [
+      "()"
+      "[]"
+      "{}"
+    ]
+    highlightMatchingLineNumber: true
   clock:
     am_pm_suffix: true
   core:
+    automaticallyUpdate: false
     closeEmptyWindows: false
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+        ".flowconfig"
+      ]
+      "source.json": [
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+      "source.shell": [
+        "fish"
+      ]
     disabledPackages: [
       "wrap-guide"
       "vim-mode"
@@ -22,7 +52,16 @@
       "vim-mode"
       "vim-mode"
       "symbols-view"
-      "language-babel"
+      "teletype"
+      "emmet"
+      "spell-check"
+      "language-javascript-plus"
+      "prettier-atom"
+      "tree-view-autoresize"
+      "atom-ctags"
+      "autocomplete-ctags"
+      "ctags-status"
+      "goto-definition"
     ]
     ignoredNames: [
       ".git"
@@ -39,6 +78,7 @@
       "symbol-gen"
     ]
     projectHome: "/Users/aditya/dev"
+    restorePreviousWindowsOnStart: "no"
     telemetryConsent: "limited"
     themes: [
       "seti-ui"
@@ -76,12 +116,14 @@
   hasklig:
     fontWeight: "regular"
   "highlight-selected": {}
+  "js-hyperclick":
+    jumpToImport: true
+    usePendingPanes: true
   "language-babel": {}
   linter: {}
   "linter-stylelint": {}
   "linter-ui-default":
     panelHeight: 56
-    showPanel: true
     showTooltip: false
   "livestyle-atom":
     analyzer:
@@ -96,8 +138,17 @@
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
     scrollAnimation: true
+  nuclide:
+    use:
+      "atom-ide-diagnostics-ui": false
   "one-dark-ui": {}
   pigments: {}
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+    prettierEslintOptions: {}
+    prettierOptions:
+      trailingComma: "all"
   "seti-syntax":
     themeColor: "Green"
   "seti-ui":
@@ -105,7 +156,7 @@
     font: "Default Atom Font"
     hideProjectTab: true
     hideTitleBar: true
-    themeColor: "Purple"
+    themeColor: "Steel"
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
@@ -120,6 +171,9 @@
     nighttime_ui_theme: "seti-ui"
     when_does_it_get_dark: 1900
     when_does_it_get_light: 600
+  swackets:
+    colorParens: true
+    colorSquareBrackets: true
   "symbols-tree-view":
     autoToggle: true
   "todo-show":
@@ -132,15 +186,22 @@
   "tree-view":
     alwaysOpenExisting: true
     focusOnReveal: false
-    hideVcsIgnoredFiles: true
     squashDirectoryNames: true
   "vim-mode": {}
   "vim-mode-plus":
     incrementalSearch: true
     incrementalSearchVisitDirection: "relative"
-    notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
+    smoothScrollOnFullScrollMotion: true
+    smoothScrollOnFullScrollMotionDuration: 100
+    smoothScrollOnHalfScrollMotion: true
+    smoothScrollOnHalfScrollMotionDuration: 100
+    smoothScrollOnRedrawCursorLine: true
+    smoothScrollOnRedrawCursorLineDuration: 100
     stayOnDelete: true
     stayOnTransformString: true
     stayOnYank: true
   welcome:
     showOnStartup: false
+".reason.source":
+  editor:
+    preferredLineLength: 110

@@ -34,3 +34,9 @@
 
 '.platform-darwin atom-text-editor:not([mini])':
   'alt-cmd-enter': 'goto-definition:go'
+
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  'ctrl-j': 'vim-mode-plus:scroll-half-screen-down'
+  'ctrl-shift-j': 'vim-mode-plus:scroll-full-screen-down'
+  'ctrl-k': 'vim-mode-plus:scroll-half-screen-up'
+  'ctrl-shift-k': 'vim-mode-plus:scroll-full-screen-up'
