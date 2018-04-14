@@ -17,6 +17,8 @@
 @seti-bg: #15191b;
 @seti-red: #f92672;
 @seti-blue: #66d9ef;
+@seti-dk-blue: #519aba;
+@seti-green: #A6E22E;
 
 // style the background and foreground colors on the atom-text-editor-element itself
 atom-text-editor {
@@ -31,7 +33,7 @@ atom-text-editor {
   }
 
   .gutter[gutter-name="line-number"] {
-    background-color: darken(@seti-bg, 1%) !important;
+    background-color: @seti-bg !important;
     color: fadeout(#fff, 80%);
   }
 
@@ -50,7 +52,7 @@ atom-text-editor {
     }
 
     &.bookmarked {
-      background-color: #66d9ef !important;
+      background-color: @seti-blue !important;
       color: #111;
 
       .icon-right::before {
@@ -61,6 +63,22 @@ atom-text-editor {
 
   .cursor-line {
     background-color: fadeout(#fff, 98%);
+  }
+
+  .custom-decorations {
+    background-color: @seti-bg;
+  }
+
+  .syntax--diff.syntax--inserted {
+    color: @seti-green;
+  }
+
+  .syntax--entity.syntax--name.syntax--tag {
+    color: @seti-blue;
+  }
+
+  .syntax--jsx.syntax--punctuation {
+    color: darken(@seti-blue, 40%);
   }
 }
 

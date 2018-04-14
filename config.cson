@@ -9,6 +9,8 @@
     ]
     autoBuildTagsWhenActive: true
     cmdArgs: "--exclude=node_modules --exclude=dist --exclude=coverage --exclude=test.js"
+  "atom-ide-ui":
+    use: {}
   "atom-ternjs":
     inlineFnCompletionDocumentation: true
     useSnippets: true
@@ -62,6 +64,8 @@
       "autocomplete-ctags"
       "ctags-status"
       "goto-definition"
+      "ide-typescript"
+      "atom-ide-ui"
     ]
     ignoredNames: [
       ".git"
@@ -119,12 +123,22 @@
   "js-hyperclick":
     jumpToImport: true
     usePendingPanes: true
-  "language-babel": {}
+  "language-babel":
+    autoIndentJSX: true
+    emmetCSSAutocomplete: true
   linter: {}
+  "linter-eslint":
+    advancedLocalNodeModules: "node_modules"
+    fixOnSave: true
+    ignoreFixableRulesWhileTyping: true
+    rulesToSilenceWhileTyping: [
+      "no-trailing-spaces"
+      "eol-last"
+    ]
   "linter-stylelint": {}
   "linter-ui-default":
     panelHeight: 56
-    showTooltip: false
+    showPanel: true
   "livestyle-atom":
     analyzer:
       notify: false
@@ -156,8 +170,10 @@
     font: "Default Atom Font"
     hideProjectTab: true
     hideTitleBar: true
-    themeColor: "Steel"
   "split-diff":
+    colors:
+      addedColor: "#b4cd00"
+      removedColor: "#fb2b71"
     diffWords: true
     ignoreWhitespace: true
     leftEditorColor: "red"
