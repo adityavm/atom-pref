@@ -12,14 +12,18 @@
   "atom-ide-ui":
     use: {}
   "atom-ternjs":
+    inlineFnCompletion: false
     inlineFnCompletionDocumentation: true
+    snippetsFirst: true
     useSnippets: true
   "autoclose-html": {}
   "autocomplete-modules":
     webpack: true
   "autocomplete-plus":
     autoActivationDelay: 100
+    defaultProvider: "Symbol"
     maxVisibleSuggestions: 5
+    similarSuggestionRemoval: "textOrSnippet"
   "bracket-matcher":
     autocompleteCharacters: [
       "()"
@@ -57,15 +61,17 @@
       "teletype"
       "emmet"
       "spell-check"
-      "language-javascript-plus"
       "prettier-atom"
       "tree-view-autoresize"
       "atom-ctags"
       "autocomplete-ctags"
       "ctags-status"
-      "goto-definition"
       "ide-typescript"
       "atom-ide-ui"
+      "pigments"
+      "color-picker"
+      "highlight-selected"
+      "atom-ternjs"
     ]
     ignoredNames: [
       ".git"
@@ -97,6 +103,7 @@
       space: " "
     lineHeight: 2
     preferredLineLength: 150
+    scrollPastEnd: true
     softWrap: true
     softWrapAtPreferredLineLength: true
   emmet: {}
@@ -125,7 +132,6 @@
     usePendingPanes: true
   "language-babel":
     autoIndentJSX: true
-    emmetCSSAutocomplete: true
   linter: {}
   "linter-eslint":
     advancedLocalNodeModules: "node_modules"
@@ -192,6 +198,8 @@
     colorSquareBrackets: true
   "symbols-tree-view":
     autoToggle: true
+  tabs:
+    enableVcsColoring: true
   "todo-show":
     ignoreThesePaths: [
       "src/build"

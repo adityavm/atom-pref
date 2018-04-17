@@ -29,9 +29,6 @@
 '.editor:not(.mini)':
   'ctrl-shift-M': 'markdown-preview:toggle'
 
-'atom-text-editor[data-grammar~="jsx"]:not([mini])':
- 'tab': 'emmet:expand-abbreviation-with-tab'
-
 '.platform-darwin atom-text-editor:not([mini])':
   'alt-cmd-enter': 'goto-definition:go'
 
