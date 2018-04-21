@@ -11,6 +11,8 @@
     cmdArgs: "--exclude=node_modules --exclude=dist --exclude=coverage --exclude=test.js"
   "atom-ide-ui":
     use: {}
+  "atom-inline-blame":
+    format: "∵ %summary% (%author%, %relativeTime% ago)"
   "atom-ternjs":
     inlineFnCompletion: false
     inlineFnCompletionDocumentation: true
@@ -70,8 +72,8 @@
       "atom-ide-ui"
       "pigments"
       "color-picker"
-      "highlight-selected"
       "atom-ternjs"
+      "background-tips"
     ]
     ignoredNames: [
       ".git"
