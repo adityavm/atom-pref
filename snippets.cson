@@ -9,36 +9,7 @@
     "prefix": "describetest"
     "body": """
     describe("$1", () => {
-
-      // init globals
-      let
-        $root,
-        $scope,
-        $q,
-        $compile,
-        $controller,
-        $2;
-
-
-    });
-    """
-
-  "before each":
-    "prefix": "beforetest"
-    "body": """
-    beforeEach(() => {
-      // initialize dependecy modules
-      $1
-
-      // initialize module to test
-      module("$2", ["$provide", $provide => {
-
-      }]);
-
-      // inject required dependencies
-      inject(($3) => {
-        $3
-      });
+      $2
     });
     """
 
@@ -46,14 +17,7 @@
     "prefix": "ittest"
     "body": """
     it("$1", () => {
-      // arrange / set up responses
-      spyOn(service, "function").and.returnValue("");
-
-      // act
-      $scope.$digest();
-
-      // assert
-      expect();
+      const component = shallow($2);
     });
     """
 
@@ -69,9 +33,29 @@
     "prefix": "debug"
     "body": "debugger; // eslint-disable-line"
 
-  "consolelog":
+  "console.log":
     "prefix": "log"
     "body": "console.log($1);"
+
+  "fragment":
+    "prefix": "<<"
+    "body": """
+      <Fragment>
+        $1
+      </Fragment>
+    """
+
+  "import {}":
+    "prefix": "imp{}"
+    "body": "import { $1 } from \"component/$1\";"
+
+  "import {} from store":
+    "prefix": "imps{}"
+    "body": "import { $1 as $2 } from \"store/$3\";"
+
+  "import":
+    "prefix": "imp"
+    "body": "import $1 from \"component/$1\";"
 
 #
 # markdown

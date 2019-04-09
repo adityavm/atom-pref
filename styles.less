@@ -18,13 +18,16 @@
 @seti-red: #f92672;
 @seti-blue: #66d9ef;
 @seti-dk-blue: #519aba;
-@seti-green: #A6E22E;
+@seti-green: #a6e22e;
+@seti-orange: #fc961f;
+@seti-purple: #ae81ff;
 
 // style the background and foreground colors on the atom-text-editor-element itself
 atom-text-editor {
   // color: white;
   background-color: @seti-bg;
   text-rendering: optimizeLegibility;
+  letter-spacing: -0.2px;
 
   // To style other content in the text editor's shadow DOM, use the ::shadow expression
   .cursor {
@@ -48,7 +51,7 @@ atom-text-editor {
   .line-number {
     &.cursor-line {
       background-color: fadeout(#fff, 98%);
-      color: fadeout(#fff, 50%);
+      color: fadeout(#fff, 30%) !important;
     }
 
     &.bookmarked {
@@ -58,6 +61,11 @@ atom-text-editor {
       .icon-right::before {
         color: transparent !important;
       }
+    }
+
+    &[class*="vmp-mark-"]::before {
+      font-family: "Dank Mono";
+      font-size: 12px;
     }
   }
 
@@ -69,6 +77,10 @@ atom-text-editor {
     background-color: @seti-bg;
   }
 
+  .syntax--keyword.syntax--control {
+    font-style: italic;
+  }
+
   .syntax--diff.syntax--inserted {
     color: @seti-green;
   }
@@ -77,8 +89,28 @@ atom-text-editor {
     color: @seti-blue;
   }
 
+  .syntax--jsx.syntax--component {
+    color: @seti-purple;
+  }
+
   .syntax--jsx.syntax--punctuation {
     color: darken(@seti-blue, 40%);
+  }
+
+  .syntax--todo,
+  .syntax--note,
+  .syntax--fixme {
+    padding: 2px 4px;
+  }
+
+  .syntax--todo,
+  .syntax--note {
+    background-color: fadeout(@seti-blue, 80%);
+  }
+
+  .syntax--fixme {
+    color: @seti-red !important;
+    background-color: fadeout(@seti-red, 80%);
   }
 }
 

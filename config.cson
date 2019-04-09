@@ -1,6 +1,5 @@
 "*":
-  Hydrogen:
-    kernelspec: "{\"kernelspecs\":{\"javascript\":{\"resource_dir\":\"/Users/aditya/Library/Jupyter/kernels/javascript\",\"spec\":{\"language\":\"javascript\",\"display_name\":\"Javascript (Node.js)\",\"env\":{},\"argv\":[\"/usr/local/Cellar/node/5.9.1/bin/node\",\"/usr/local/lib/node_modules/ijavascript/lib/kernel.js\",\"{connection_file}\",\"--protocol=5.0\"]}},\"python2\":{\"resource_dir\":\"/Users/aditya/anaconda/lib/python2.7/site-packages/ipykernel/resources\",\"spec\":{\"language\":\"python\",\"display_name\":\"Python 2\",\"env\":{},\"argv\":[\"/Users/aditya/anaconda/bin/python\",\"-m\",\"ipykernel\",\"-f\",\"{connection_file}\"]}}}}"
+  Hydrogen: {}
   "atom-beautify":
     _analyticsUserId: "221df0f9-10b8-41d9-a3e1-0ad8bdd12898"
   "atom-ctags":
@@ -8,11 +7,15 @@
       "meta"
     ]
     autoBuildTagsWhenActive: true
-    cmdArgs: "--exclude=node_modules --exclude=dist --exclude=coverage --exclude=test.js"
   "atom-ide-ui":
     use: {}
   "atom-inline-blame":
-    format: "∵ %summary% (%author%, %relativeTime% ago)"
+    format: "∵ %summary% → %author%, %relativeTime% ago"
+    timeout: 2000
+  "atom-lupa":
+    positionOfBreadcrumbs: "bottom"
+    positionOfPanel: "right"
+    shouldShowBreadcrumbs: false
   "atom-ternjs":
     inlineFnCompletion: false
     inlineFnCompletionDocumentation: true
@@ -36,7 +39,6 @@
   clock:
     am_pm_suffix: true
   core:
-    automaticallyUpdate: false
     closeEmptyWindows: false
     customFileTypes:
       "source.ini": [
@@ -59,21 +61,20 @@
       "vim-mode"
       "vim-mode"
       "vim-mode"
-      "symbols-view"
       "teletype"
       "emmet"
       "spell-check"
       "prettier-atom"
       "tree-view-autoresize"
-      "atom-ctags"
-      "autocomplete-ctags"
-      "ctags-status"
       "ide-typescript"
       "atom-ide-ui"
-      "pigments"
       "color-picker"
-      "atom-ternjs"
       "background-tips"
+      "js-hyperclick"
+      "hyperclick"
+      "ctags-status"
+      "atom-ctags"
+      "atom-ternjs"
     ]
     ignoredNames: [
       ".git"
@@ -94,16 +95,16 @@
     telemetryConsent: "limited"
     themes: [
       "seti-ui"
-      "monokai-seti"
+      "lomokai-syntax"
     ]
-    titleBar: "custom"
+    useTreeSitterParsers: false
   docblockr: {}
   editor:
-    fontFamily: "DejaVu Sans Code"
-    fontSize: 11
+    fontFamily: "Dank Mono"
+    fontSize: 13
     invisibles:
       space: " "
-    lineHeight: 2
+    lineHeight: 1.9
     preferredLineLength: 150
     scrollPastEnd: true
     softWrap: true
@@ -119,7 +120,8 @@
     debug: true
     skipAutofoldWhenNotFirstLine: true
     skipAutofoldWhenOnlyOneFunction: true
-  github: {}
+  github:
+    viewChangesForCurrentFileDiffPaneSplitDirection: "right"
   "glowing-cursor":
     cursorWidth: 2
     glowColor: "#ff2f92"
@@ -132,24 +134,34 @@
   "js-hyperclick":
     jumpToImport: true
     usePendingPanes: true
+  "jump-to-import":
+    enableDebug: true
   "language-babel":
     autoIndentJSX: true
-  linter: {}
+  linter:
+    lintPreviewTabs: false
   "linter-eslint":
-    advancedLocalNodeModules: "node_modules"
-    fixOnSave: true
-    ignoreFixableRulesWhileTyping: true
-    rulesToSilenceWhileTyping: [
-      "no-trailing-spaces"
-      "eol-last"
-    ]
+    advanced:
+      localNodeModules: "node_modules"
+    autofix:
+      fixOnSave: true
+      ignoreFixableRulesWhileTyping: true
+    disabling:
+      rulesToSilenceWhileTyping: [
+        "no-trailing-spaces"
+        "eol-last"
+      ]
   "linter-stylelint": {}
   "linter-ui-default":
-    panelHeight: 56
-    showPanel: true
+    alwaysTakeMinimumSpace: true
+    decorateOnTreeView: "None"
+    gutterPosition: "Left"
+    panelHeight: 146
+    showTooltip: false
   "livestyle-atom":
     analyzer:
       notify: false
+  "lomokai-syntax": {}
   minimap:
     absoluteMode: true
     plugins:
@@ -160,6 +172,8 @@
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
     scrollAnimation: true
+  narrow:
+    locationToOpen: "center"
   nuclide:
     use:
       "atom-ide-diagnostics-ui": false
@@ -198,7 +212,11 @@
   swackets:
     colorParens: true
     colorSquareBrackets: true
+  "symbols-list":
+    basic:
+      hideOnEmptyList: true
   "symbols-tree-view":
+    autoHide: true
     autoToggle: true
   tabs:
     enableVcsColoring: true
@@ -212,6 +230,7 @@
   "tree-view":
     alwaysOpenExisting: true
     focusOnReveal: false
+    hideVcsIgnoredFiles: true
     squashDirectoryNames: true
   "vim-mode": {}
   "vim-mode-plus":
@@ -226,6 +245,8 @@
     stayOnDelete: true
     stayOnTransformString: true
     stayOnYank: true
+  weboutline:
+    SupportBabelLikeFunctions: true
   welcome:
     showOnStartup: false
 ".reason.source":
